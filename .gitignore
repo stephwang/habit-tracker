@@ -1,3 +1,7 @@
 node_modules
 venv
 .c9
+*.pyc
+staticfiles
+.env
+db.sqlite3

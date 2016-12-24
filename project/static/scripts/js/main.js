@@ -76,8 +76,8 @@ var Header = React.createClass({displayName: "Header",
     return (
     React.createElement("div", {className: "header-elements"}, 
         React.createElement("div", {className: "logo"}, "Habitz"), 
-        React.createElement("div", {className: "log-in"}, React.createElement("a", {href: "/login"}, "Log in")), 
-        React.createElement("div", {className: "sign-up"}, React.createElement("a", {href: "/signup"}, "Sign up"))
+        React.createElement("div", {className: "sign-up"}, React.createElement("a", {href: "/signup"}, "Sign up")), 
+        React.createElement("div", {className: "log-in"}, React.createElement("a", {href: "/login"}, "Log in"))
     )
     );
   }
