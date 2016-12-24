@@ -1,6 +1,36 @@
 /* custom styles */
 body {
     font-family: sans-serif;
+    font-size: 14px;
+    margin: 0px;
+}
+
+/* header */
+#header {
+    padding: 20px 40px;
+    border-bottom: 2px solid #105e31;
+}
+
+.header-elements {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header-elements > div {
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #105e31;
+}
+
+.log-in, .sign-up {
+    float: right;
+    line-height: 20px;
 }
 
 .habit-card {

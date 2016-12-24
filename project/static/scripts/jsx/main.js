@@ -1,4 +1,5 @@
 var HabitCard = require('./habitCard');
+var Header = require('./header');
 
 var TrackerPage = React.createClass({
 
@@ -33,4 +34,9 @@ var data = [
 ReactDOM.render(
   <TrackerPage data={ data } />,
   document.getElementById('main')
+);
+
+ReactDOM.render(
+  <Header />,
+  document.getElementById('header')
 );
