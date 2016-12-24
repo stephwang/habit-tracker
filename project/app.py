@@ -17,5 +17,5 @@ def signup():
     return render_template('signup.html')
 
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 8080))
+    port = int(os.environ.get("PORT", 5000)) # set to 8080 when working in cloud 9  
     app.run(host='0.0.0.0', port=port, debug=True)
