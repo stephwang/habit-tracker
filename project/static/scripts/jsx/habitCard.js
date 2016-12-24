@@ -4,20 +4,16 @@ var HabitCard = React.createClass({
   getInitialState: function(){
     return { complete: '' };
   },
-
+  
   render: function() {
-    var date = this.props.date;
-    var habit = this.props.habit;
-    console.log(date);
-    console.log(habit);
 
     return (
-      <div class="habit-card">
-        <div class="habit-card-title">
-          {{date}}
+      <div className = "habit-card">
+        <div className = "habit-card-title">
+          {this.props.date}
         </div>
         <ul>
-          <li>{{habit}}</li>
+          <input type="checkbox" name={this.props.habit} checked={this.props.status == "true" && "checked"}/>{this.props.habit}
         </ul>
       </div>
     );

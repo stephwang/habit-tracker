@@ -9,7 +9,7 @@ var TrackerPage = React.createClass({
     
     return (
       <div>
-        { data.map(function(item){ return <HabitCard date={item.date} habit={item.habit}/> }) }
+        { data.map(function(item){ return <HabitCard date={item.date} habit={item.habit} status={item.status}/> }) }
       </div>
     );
   }
@@ -21,7 +21,7 @@ var data = [
   {
     "date": "Dec 23"
     , "habit": "coding"
-    , "status": "true"
+    , "status": "false"
   }
   , {
     "date": "Dec 24"

@@ -10,7 +10,7 @@ var TrackerPage = React.createClass({displayName: "TrackerPage",
     
     return (
       React.createElement("div", null, 
-         data.map(function(item){ return React.createElement(HabitCard, {date: item.date, habit: item.habit}) }) 
+         data.map(function(item){ return React.createElement(HabitCard, {date: item.date, habit: item.habit, status: item.status}) }) 
       )
     );
   }
@@ -22,7 +22,7 @@ var data = [
   {
     "date": "Dec 23"
     , "habit": "coding"
-    , "status": "true"
+    , "status": "false"
   }
   , {
     "date": "Dec 24"
@@ -43,20 +43,16 @@ var HabitCard = React.createClass({displayName: "HabitCard",
   getInitialState: function(){
     return { complete: '' };
   },
-
+  
   render: function() {
-    var date = this.props.date;
-    var habit = this.props.habit;
-    console.log(date);
-    console.log(habit);
 
     return (
-      React.createElement("div", {class: "habit-card"}, 
-        React.createElement("div", {class: "habit-card-title"}, 
-          {date}
+      React.createElement("div", {className: "habit-card"}, 
+        React.createElement("div", {className: "habit-card-title"}, 
+          this.props.date
         ), 
         React.createElement("ul", null, 
-          React.createElement("li", null, {habit})
+          React.createElement("input", {type: "checkbox", name: this.props.habit, checked: this.props.status == "true" && "checked"}), this.props.habit
         )
       )
     );
