@@ -4,7 +4,7 @@ var Header = React.createClass({
 
     return (
     <div className="header-elements">
-        <div className="logo">Habitz</div>
+        <div className="logo"><a href="/">Habitz</a></div>
         <div className="sign-up"><a href="/signup">Sign up</a></div>
         <div className="log-in"><a href="/login">Log in</a></div>
     </div>
@@ -13,4 +13,7 @@ var Header = React.createClass({
 
 });
 
-module.exports = Header;
+ReactDOM.render(
+  <Header />,
+  document.getElementById('header')
+);

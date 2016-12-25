@@ -5,7 +5,7 @@ var Header = React.createClass({displayName: "Header",
 
     return (
     React.createElement("div", {className: "header-elements"}, 
-        React.createElement("div", {className: "logo"}, "Habitz"), 
+        React.createElement("div", {className: "logo"}, React.createElement("a", {href: "/"}, "Habitz")), 
         React.createElement("div", {className: "sign-up"}, React.createElement("a", {href: "/signup"}, "Sign up")), 
         React.createElement("div", {className: "log-in"}, React.createElement("a", {href: "/login"}, "Log in"))
     )
@@ -14,6 +14,9 @@ var Header = React.createClass({displayName: "Header",
 
 });
 
-module.exports = Header;
+ReactDOM.render(
+  React.createElement(Header, null),
+  document.getElementById('header')
+);
 
 },{}]},{},[1]);
