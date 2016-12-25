@@ -24,11 +24,21 @@ def signup():
 
 @app.route('/signup/', methods=['POST'])
 def user_signup():
-    username = request.form.username
-    password = request.form.password
-    # password2 = request.form.password2
-    # email = request.form.email
-    return render_template('signup.html', username=username, password=password)
+    username = request.form.get('username')
+    password = request.form.get('password')
+    verify = request.form.get('verify')
+    email = request.form.get('email')
+    mongo.db.users.insert_one(
+        {
+            "username": username,
+            "password": password,
+            "email": email,
+        })
+    return render_template('signup.html'
+                            , username = username
+                            , password = password
+                            , verify = verify
+                            , email = email)
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000)) 
