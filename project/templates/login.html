@@ -10,9 +10,15 @@
   <body>
     <div id="header"></div>
     <div class="container">
-      <h1>Habit Tracker</h1>
-      <br>
-      <div id="main"></div>
+      <h1>Log in</h1>
+      <form action="/signup/" method="post">
+        <span style="color:red">{{login_error}}</span>
+        <label> username <input type="text" name="username" value={{username}}></label>
+        <br>
+        <label> password <input type="password" name="password"></label>
+        <br>
+        <input type="submit">
+      </form>
     </div>
     <!-- scripts -->
     <script src="{{ url_for('static', filename='bower_components/react/react.min.js') }}"></script>

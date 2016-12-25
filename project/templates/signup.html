@@ -13,26 +13,20 @@
     <div class="container">
       <h1>Sign up</h1>
       <form action="/signup/" method="post">
-          Sign up
-          <br>
-          <label> username <input type="text" name="username" value={{username}}></label>
-          <span style="color:red">{{username_error}}</span>
-          <br>
-          <label> password <input type="password" name="password"></label>
-          <span style="color:red">{{password_error}}</span>
-          <br>
-          <label> verify password <input type="password" name="verify"></label>
-          <span style="color:red">{{password_match_error}}</span>
-          <br>
-          <label> email (optional) <input type="text" name="email" value="{{email}}"></label>
-          <span style="color:red">{{email_error}}</span>
-          <br>
-          <input type="submit">
+        <label> username <input type="text" name="username" value={{username}}></label>
+        <span style="color:red">{{username_error}}</span>
+        <br>
+        <label> password <input type="password" name="password"></label>
+        <span style="color:red">{{password_error}}</span>
+        <br>
+        <label> verify password <input type="password" name="verify"></label>
+        <span style="color:red">{{password_match_error}}</span>
+        <br>
+        <label> email (optional) <input type="text" name="email" value="{{email}}"></label>
+        <span style="color:red">{{email_error}}</span>
+        <br>
+        <input type="submit">
       </form>
-      <div>{{ username }}</div>
-      <div>{{ password }}</div>
-      <div>{{ verify }}</div>
-      <div>{{ email }}</div>
     </div>
     <!-- scripts -->
     <script src="{{ url_for('static', filename='bower_components/react/react.min.js') }}"></script>
